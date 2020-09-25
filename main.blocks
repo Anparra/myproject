@@ -1,4 +1,4 @@
-<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable id="EF(:[}e!6)]3X3{%@L}.">mySprite</variable><variable type="KIND_SpriteKind" id=",qzwR~%pA92gkud/ch.k">Player</variable><variable type="KIND_SpriteKind" id=";gs:Dho00a=9PlBvj5[#">Projectile</variable><variable type="KIND_SpriteKind" id="/6idSj~#qqMY;5U2coX?">Food</variable><variable type="KIND_SpriteKind" id="e3nY(HUH,Je07?vq0a!9">Enemy</variable></variables><block type="pxt-on-start" id="Ik-[?bhA5Ep~/D*r,#~%" x="0" y="0"><statement name="HANDLER"><block type="variables_set" id="71Vfnq/Z_=%uzNn(YVEl"><field name="VAR" id="EF(:[}e!6)]3X3{%@L}.">mySprite</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="t)Yz[x:)b9RhJ0]SPLwl"><value name="img"><shadow type="screen_image_picker" id=";IfE#J.(u~q~}F{$x?`Y"><field name="img">img`
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable type="KIND_SpriteKind" id=",qzwR~%pA92gkud/ch.k">Player</variable><variable type="KIND_SpriteKind" id=";gs:Dho00a=9PlBvj5[#">Projectile</variable><variable type="KIND_SpriteKind" id="/6idSj~#qqMY;5U2coX?">Food</variable><variable type="KIND_SpriteKind" id="e3nY(HUH,Je07?vq0a!9">Enemy</variable><variable id="EF(:[}e!6)]3X3{%@L}.">mySprite</variable><variable id="J=`nZ:vfKMoFzMlzi?lf">projectile</variable></variables><block type="pxt-on-start" id="Ik-[?bhA5Ep~/D*r,#~%" x="0" y="0"><statement name="HANDLER"><block type="variables_set" id="71Vfnq/Z_=%uzNn(YVEl"><field name="VAR" id="EF(:[}e!6)]3X3{%@L}.">mySprite</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="t)Yz[x:)b9RhJ0]SPLwl"><value name="img"><shadow type="screen_image_picker" id=";IfE#J.(u~q~}F{$x?`Y"><field name="img">img`
 . . . . . . . . . . b 5 b . . . 
 . . . . . . . . . b 5 b . . . . 
 . . . . . . . . . b c . . . . . 
@@ -15,4 +15,21 @@ c b d d c c b 5 5 5 5 5 5 5 b .
 . c d d d d d d 5 5 5 5 5 d b . 
 . . c b d d d d d 5 5 5 b b . . 
 . . . c c c c c c c c b b . . . 
-`</field></shadow></value><value name="kind"><shadow type="spritekind" id="[6#OK:#{-7]4)a?0x6h!"><field name="MEMBER">Player</field></shadow></value></block></value></block></statement></block></xml>
+`</field></shadow></value><value name="kind"><shadow type="spritekind" id="[6#OK:#{-7]4)a?0x6h!"><field name="MEMBER">Player</field></shadow></value></block></value></block></statement></block><block type="gameinterval" id="J_@_AA7oWz.k3~$qX7@0" x="610" y="10"><value name="period"><shadow type="timePicker" id="|`5d*w^S3XT+a/(U:eJO"><field name="ms">2000</field></shadow></value><statement name="HANDLER"><block type="variables_set" id="seFtSVip9[S:zFIHo}rh"><field name="VAR" id="J=`nZ:vfKMoFzMlzi?lf">projectile</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreateprojectilefromsprite" id="GD,ZnGH#xbMSa5aq(/jR"><value name="img"><shadow type="screen_image_picker" id="sSLJBsNfk%gb@]rF{l{V"><field name="img">img`
+. . . . . . b b b b . . . . . . 
+. . . . . . b 4 4 4 b . . . . . 
+. . . . . . b b 4 4 4 b . . . . 
+. . . . . b 4 b b b 4 4 b . . . 
+. . . . b d 5 5 5 4 b 4 4 b . . 
+. . . . b 3 2 3 5 5 4 e 4 4 b . 
+. . . b d 2 2 2 5 7 5 4 e 4 4 e 
+. . . b 5 3 2 3 5 5 5 5 e e e e 
+. . b d 7 5 5 5 3 2 3 5 5 e e e 
+. . b 5 5 5 5 5 2 2 2 5 5 d e e 
+. b 3 2 3 5 7 5 3 2 3 5 d d e 4 
+. b 2 2 2 5 5 5 5 5 5 d d e 4 . 
+b d 3 2 d 5 5 5 d d d 4 4 . . . 
+b 5 5 5 5 d d 4 4 4 4 . . . . . 
+4 d d d 4 4 4 . . . . . . . . . 
+4 4 4 4 . . . . . . . . . . . . 
+`</field></shadow></value><value name="sprite"><block type="variables_get" id="VTUOE#$@pgVOml}gs4cS"><field name="VAR" id="EF(:[}e!6)]3X3{%@L}.">mySprite</field></block></value><value name="vx"><shadow type="spriteSpeedPicker" id="$En:,dsTSHB#g^YRd3mC"><field name="speed">50</field></shadow></value><value name="vy"><shadow type="spriteSpeedPicker" id="Loe]HPZAV5CQ@Je)EFK3"><field name="speed">50</field></shadow></value></block></value></block></statement></block></xml>
